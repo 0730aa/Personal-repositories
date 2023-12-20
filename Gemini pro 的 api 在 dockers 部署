@@ -1,0 +1,6 @@
+docker run --name geminiprochat \
+--restart always \
+-p 3030:3000 \
+-itd \
+-e GEMINI_API_KEY=你的api值 \
+howie6879/geminiprochat:v0.1.0
