@@ -1,0 +1,6 @@
+#快速更新全部容器
+docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower
+#指定更新容器,NAMES.1 NAMES.2 为容器名
+docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower NAMES.1 NAMES.2
+#Watch­tower运行一次就自动退出容器
+docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once NAMES.1
